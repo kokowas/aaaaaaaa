@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فهرس الكتاب</title>
+    <style>
+        /* Define the custom font */
+        @font-face {
+            font-family: 'Questv1'; /* This is the name you'll use in your CSS */
+            src: url('Questv1-Regular.otf') format('opentype'); /* Path to your font file */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Questv1', 'Tahoma', 'Arial', sans-serif; /* Use Questv1 first, then fallbacks */
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50; /* Dark blue */
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .accordion-button {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: right;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+            position: relative; /* For the icon */
+            font-family: inherit; /* Ensures buttons also use the body font or Questv1 if set directly */
+        }
+
+        .accordion-button:after {
+            content: '\2795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: #777;
+            float: left; /* This will place it on the left side */
+            margin-left: 5px; /* Adjust as needed for spacing */
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-button.active:after {
+            content: '\2796'; /* Unicode character for "minus" sign (-) */
+        }
+
+
+        .accordion-button:hover {
+            background-color: #ddd;
+        }
+
+        .accordion-content {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .accordion-content li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-content li:last-child {
+            border-bottom: none;
+        }
+
+        .lesson-title {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+        .page-number {
+            font-weight: bold;
+            color: #555;
+            margin-left: 15px;
+        }
+
+        /* Unit-specific colors */
+        .unit1 { background-color: #e9c46a; color: #264653; }
+        .unit1:hover { background-color: #f4a261; }
+        .unit1.active:after { color: #264653; }
+
+
+        .unit2 { background-color: #2a9d8f; color: white; }
+        .unit2:hover { background-color: #264653; }
+        .unit2.active:after { color: white; }
+
+        .unit3 { background-color: #f4a261; color: #264653; }
+        .unit3:hover { background-color: #e76f51; }
+        .unit3.active:after { color: #264653; }
+
+        .unit4 { background-color: #e76f51; color: white; }
+        .unit4:hover { background-color: #d9534f; }
+        .unit4.active:after { color: white; }
+
+        .unit5 { background-color: #8ecae6; color: #023047; }
+        .unit5:hover { background-color: #219ebc; }
+        .unit5.active:after { color: #023047; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>الفهرس</h1>
+
+        <div class="accordion">
+            <button class="accordion-button unit1">الوحدة الانطلاقية 1: في المدرسة</button>
+            <div class="accordion-content">
+                <ul>
+                    <li><span class="lesson-title">الأعداد من 1 إلى 5 (1)</span><span class="page-number">ص 14</span></li>
+                    <li><span class="lesson-title">تمييز مَوْقِعٍ فِي الْفَضَاء (1)</span><span class="page-number">ص 15</span></li>
+                    <li><span class="lesson-title">الْحَوَاس (1)</span><span class="page-number">ص 16</span></li>
+                    <li><span class="lesson-title">الأعداد من 1 إلى 5 (2)</span><span class="page-number">ص 17</span></li>
+                    <li><span class="lesson-title">الأعداد من 6 إلى 9 (1)</span><span class="page-number">ص 18</span></li>
+                    <li><span class="lesson-title">الأعداد من 6 إلى 9 (2)</span><span class="page-number">ص 19</span></li>
+                    <li><span class="lesson-title">الْحَوَاس (2)</span><span class="page-number">ص 20</span></li>
+                    <li><span class="lesson-title">الأعداد من 1 إلى 9</span><span class="page-number">ص 21</span></li>
+                    <li><span class="lesson-title">تمييز مَوْقِعٍ فِي الْفَضَاء (2)</span><span class="page-number">ص 22</span></li>
+                    <li><span class="lesson-title">تشكيل كميات</span><span class="page-number">ص 23</span></li>
+                    <li><span class="lesson-title">أنا أَتَحَرَّكُ وأَتَنَقَّلُ</span><span class="page-number">ص 24</span></li>
+                    <li><span class="lesson-title">العد0</span><span class="page-number">ص 25</span></li>
+                    <li><span class="lesson-title">عَدُّ كمّيات صغيرة</span><span class="page-number">ص 26</span></li>
+                    <li><span class="lesson-title">كيف أتحرك؟</span><span class="page-number">ص 27</span></li>
+                    <li><span class="lesson-title">العدّ 10</span><span class="page-number">ص 28</span></li>
+                    <li><span class="lesson-title">اسْتِعْمَالُ الْعَدَدِ لِتَذَكُرِ كَمِّيَّةٍ</span><span class="page-number">ص 29</span></li>
+                    <li><span class="lesson-title">اسْتِعْمَالُ الْعَدَدِ لِتَعْيِينِ رُتْبَةٍ</span><span class="page-number">ص 30</span></li>
+                    <li><span class="lesson-title">أَتَحَرَّكُ وَأُحَافِظُ عَلَى صِحَّتِي</span><span class="page-number">ص 31</span></li>
+                    <li><span class="lesson-title">اسْتِخْرَاجُ مَعْلُومَاتٍ</span><span class="page-number">ص 32</span></li>
+                    <li><span class="lesson-title">تمييز مَوْقِعٍ فِي الْفَضَاء (3)</span><span class="page-number">ص 33</span></li>
+                    <li><span class="lesson-title">أصنّف أغذيتي</span><span class="page-number">ص 34</span></li>
+                    <li><span class="lesson-title">مُقَارَنَةُ الأَعْدَادِ إِلَى 10</span><span class="page-number">ص 35</span></li>
+                    <li><span class="lesson-title">مقارنة أطوال (1)</span><span class="page-number">ص 36</span></li>
+                    <li><span class="lesson-title">أغذيتي متنوعة</span><span class="page-number">ص 37</span></li>
+                    <li><span class="lesson-title">مقارنة أطوال (2)</span><span class="page-number">ص 38</span></li>
+                    <li><span class="lesson-title">المسالك (1)</span><span class="page-number">ص 39</span></li>
+                    <li><span class="lesson-title">وَضْعِيَّاتُ جَمْعٍ أَوْ طَرْحٍ (1)</span><span class="page-number">ص 40</span></li>
+                    <li><span class="lesson-title">أغذيتي صحية</span><span class="page-number">ص 41</span></li>
+                    <li><span class="lesson-title">الرَّمْزَانِ + وَ =</span><span class="page-number">ص 42</span></li>
+                    <li><span class="lesson-title">الرَّمْزَانِ - وَ =</span><span class="page-number">ص 43</span></li>
+                    <li><span class="lesson-title">الْكِتَابَاتُ الْمُخْتَلِفَةُ لِعَدَدٍ</span><span class="page-number">ص 44</span></li>
+                    <li><span class="lesson-title">أُجَنِّدُ مَعَارِفي (ر1)</span><span class="page-number">ص 45</span></li>
+                    <li><span class="lesson-title">أُجَنِّدُ مَعَارِفي (ت ع 1)</span><span class="page-number">ص 46</span></li>
+                    <li><span class="lesson-title">الحصيلة (ر1)</span><span class="page-number">ص 47</span></li>
+                    <li><span class="lesson-title">الحصيلة (ت ع 1)</span><span class="page-number">ص 48</span></li>
+                    <li><span class="lesson-title">الرِّيَاضِيَّاتُ فِي حَيَاتِنَا الْيَوْمِيَّةِ</span><span class="page-number">ص 49</span></li>
+                </ul>
+            </div>
+
+            <button class="accordion-button unit2">الوحدة الانطلاقية 2: في حديقة التجارب</button>
+            <div class="accordion-content">
+                <ul>
+                    <li><span class="lesson-title">مقارنة أطوال باستعمال وحدة غير معتمدة</span><span class="page-number">ص 52</span></li>
+                    <li><span class="lesson-title">المسالك (2)</span><span class="page-number">ص 53</span></li>
+                    <li><span class="lesson-title">أنا أتنفس (1)</span><span class="page-number">ص 54</span></li>
+                    <li><span class="lesson-title">الأعداد إلى 19 (1)</span><span class="page-number">ص 55</span></li>
+                    <li><span class="lesson-title">قراءة جدول</span><span class="page-number">ص 56</span></li>
+                    <li><span class="lesson-title">أنا أتنفس (2)</span><span class="page-number">ص 57</span></li>
+                    <li><span class="lesson-title">الأعداد إلى 19 (2)</span><span class="page-number">ص 58</span></li>
+                    <li><span class="lesson-title">الأعداد إلى 19 (3)</span><span class="page-number">ص 59</span></li>
+                    <li><span class="lesson-title">التَّعْلِيمُ عَلَى مَرْصُوفَةٍ</span><span class="page-number">ص 60</span></li>
+                    <li><span class="lesson-title">قلبي ينبض (1)</span><span class="page-number">ص 61</span></li>
+                    <li><span class="lesson-title">ضِعْفُ عَدَدٍ أَصْغَرَ مِنْ 10</span><span class="page-number">ص 62</span></li>
+                    <li><span class="lesson-title">نِصْفُ عَدَدٍ أَصْغَرَ مِنْ 20</span><span class="page-number">ص 63</span></li>
+                    <li><span class="lesson-title">إِتْمَامُ جَدْوَلٍ</span><span class="page-number">ص 64</span></li>
+                    <li><span class="lesson-title">قلبي ينبض (2)</span><span class="page-number">ص 65</span></li>
+                    <li><span class="lesson-title">التَّنَقُّلُ عَلَى مَرْصُوفَةٍ (2)</span><span class="page-number">ص 66</span></li>
+                    <li><span class="lesson-title">الأَعْدَادُ إِلَى 39 (1)</span><span class="page-number">ص 67</span></li>
+                    <li><span class="lesson-title">أُجَنِّدُ مَعَارِفي (ت ع 2)</span><span class="page-number">ص 68</span></li>
+                    <li><span class="lesson-title">أُجَنِّدُ مَعَارِفي (ر 2)</span><span class="page-number">ص 69</span></li>
+                    <li><span class="lesson-title">الْحَصِيلَةُ (ر 2)</span><span class="page-number">ص 70</span></li>
+                    <li><span class="lesson-title">الْحَصِيلَةُ (ت ع 2)</span><span class="page-number">ص 71</span></li>
+                </ul>
+            </div>
+
+            <button class="accordion-button unit3">الوحدة الانطلاقية 3: في حديقة التسلية</button>
+            <div class="accordion-content">
+                <ul>
+                    <li><span class="lesson-title">التَّجْمِيعُ وَالاسْتِبْدَالُ</span><span class="page-number">ص 74</span></li>
+                    <li><span class="lesson-title">الْمُرُورُ إِلَى الْعَشَرَةِ</span><span class="page-number">ص 75</span></li>
+                    <li><span class="lesson-title">حَيَوَانَاتٌ تَعِيشُ مَعَنَا (1)</span><span class="page-number">ص 76</span></li>
+                    <li><span class="lesson-title">الْأَعْدَادُ إِلَى 39 (2)</span><span class="page-number">ص 77</span></li>
+                    <li><span class="lesson-title">إِضَافَةُ أَوْ طَرْحُ أَعْدَادٍ صَغِيرَةٍ (1)</span><span class="page-number">ص 78</span></li>
+                    <li><span class="lesson-title">حَيَوَانَاتٌ تَعِيشُ مَعَنَا (2)</span><span class="page-number">ص 79</span></li>
+                    <li><span class="lesson-title">تَنْظِيمُ أَوْقَاتٍ فِي الْيَوْمِ</span><span class="page-number">ص 80</span></li>
+                    <li><span class="lesson-title">الاسْتِقَامِيَّةُ</span><span class="page-number">ص 81</span></li>
+                    <li><span class="lesson-title">نَبَاتَاتٌ تَعِيشُ مَعَنَا (1)</span><span class="page-number">ص 82</span></li>
+                    <li><span class="lesson-title">الْأَعْدَادُ إِلَى 39 (3)</span><span class="page-number">ص 83</span></li>
+                    <li><span class="lesson-title">كِتَابَةُ مَعْلُومَاتٍ فِي جَدْوَلٍ</span><span class="page-number">ص 84</span></li>
+                    <li><span class="lesson-title">نَبَاتَاتٌ تَعِيشُ مَعَنَا (2)</span><span class="page-number">ص 85</span></li>
+                    <li><span class="lesson-title">وَضْعِيَّاتُ جَمْعٍ أَوْ طَرْحٍ (2)</span><span class="page-number">ص 86</span></li>
+                    <li><span class="lesson-title">أُجَنِّدُ مَعَارِفي (ر 3)</span><span class="page-number">ص 87</span></li>
+                    <li><span class="lesson-title">أُجَنِّدُ مَعَارِفي (ت ع 3)</span><span class="page-number">ص 88</span></li>
+                    <li><span class="lesson-title">الحصيلة (ر 3)</span><span class="page-number">ص 89</span></li>
+                    <li><span class="lesson-title">الحصيلة (ت ع 3)</span><span class="page-number">ص 90</span></li>
+                    <li><span class="lesson-title">الرِّيَاضِيَّاتُ فِي حَيَاتِنَا الْيَوْمِيَّةِ</span><span class="page-number">ص 91</span></li>
+                </ul>
+            </div>
+
+            <button class="accordion-button unit4">الوحدة الانطلاقية 4: أحتفل بعيد ميلادي</button>
+            <div class="accordion-content">
+                <ul>
+                    <li><span class="lesson-title">رَسْمُ خُطُوطٍ مُسْتَقِيمَةٍ</span><span class="page-number">ص 94</span></li>
+                    <li><span class="lesson-title">الْمُدَدُ الزَّمَنِيَّةُ</span><span class="page-number">ص 95</span></li>
+                    <li><span class="lesson-title">الأَعْدَادُ إِلَى 69 (1)</span><span class="page-number">ص 96</span></li>
+                    <li><span class="lesson-title">تَعَلُّمُ أَحْدَاثٍ</span><span class="page-number">ص 97</span></li>
+                    <li><span class="lesson-title">الأَعْدَادُ إِلَى 69 (2)</span><span class="page-number">ص 98</span></li>
+                    <li><span class="lesson-title">الأَعْدَادُ إِلَى 69 (3)</span><span class="page-number">ص 99</span></li>
+                    <li><span class="lesson-title">تَمَوْضُعُ الْأَحْدَاثِ فِي الزَّمَنِ</span><span class="page-number">ص 100</span></li>
+                    <li><span class="lesson-title">التَّعَرُّفُ عَلَى مُجَسَّمَاتٍ مَأْلُوفَةٍ</span><span class="page-number">ص 101</span></li>
+                    <li><span class="lesson-title">إِضَافَةُ أَوْ طَرْحُ أَعْدَادٍ صَغِيرَةٍ (2)</span><span class="page-number">ص 102</span></li>
+                    <li><span class="lesson-title">قِرَاءَةُ السَّاعَةِ (1)</span><span class="page-number">ص 103</span></li>
+                    <li><span class="lesson-title">تَنْظِيمُ الْوَقْتِ</span><span class="page-number">ص 104</span></li>
+                    <li><span class="lesson-title">الْحِسَابُ بِتَمَعُّنٍ (1)</span><span class="page-number">ص 105</span></li>
+                    <li><span class="lesson-title">أُجَنِّدُ مَعَارِفي (ر 4)</span><span class="page-number">ص 106</span></li>
+                    <li><span class="lesson-title">أُجَنِّدُ مَعَارِفي (ت ع 4)</span><span class="page-number">ص 107</span></li>
+                    <li><span class="lesson-title">الحصيلة (ر 4)</span><span class="page-number">ص 108</span></li>
+                    <li><span class="lesson-title">الحصيلة (ت ع 4)</span><span class="page-number">ص 109</span></li>
+                </ul>
+            </div>
+
+            <button class="accordion-button unit5">الوحدة الانطلاقية 5: في المتجر العملاق</button>
+            <div class="accordion-content">
+                <ul>
+                    <li><span class="lesson-title">الْمُكَعَّبُ وَالْبَلاطُ الْقَائِمُ</span><span class="page-number">ص 112</span></li>
+                    <li><span class="lesson-title">مُتَمِّمُ عَدَدٍ إِلَى الْعَشَرَةِ الْمُوَالِيَةِ</span><span class="page-number">ص 113</span></li>
+                    <li><span class="lesson-title">أَجْسَامٌ مُتَنَوِّعَةٌ فِي مُحِيطِي (1)</span><span class="page-number">ص 114</span></li>
+                    <li><span class="lesson-title">الْحِسَابُ بِتَمَعُّنٍ (2)</span><span class="page-number">ص 115</span></li>
+                    <li><span class="lesson-title">اسْتِعْمَالُ جَدْوَلٍ لِحَلِّ مُشْكِلٍ</span><span class="page-number">ص 116</span></li>
+                    <li><span class="lesson-title">الْحِسَابُ بِتَمَعُّنٍ (3)</span><span class="page-number">ص 117</span></li>
+                    <li><span class="lesson-title">أَجْسَامٌ مُتَنَوِّعَةٌ فِي مُحِيطِي (2)</span><span class="page-number">ص 118</span></li>
+                    <li><span class="lesson-title">التَّعَرُّفُ عَلَى أَشْكَالٍ مُسْتَوِيَةٍ</span><span class="page-number">ص 119</span></li>
+                    <li><span class="lesson-title">قِرَاءَةُ السَّاعَةِ (2)</span><span class="page-number">ص 120</span></li>
+                    <li><span class="lesson-title">الثَّلْجُ يَتَحَوَّلُ إِلَى مَاءٍ</span><span class="page-number">ص 121</span></li>
+                    <li><span class="lesson-title">الْحَاسِبَةُ (1)</span><span class="page-number">ص 122</span></li>
+                    <li><span class="lesson-title">الرَّسْمُ عَلَى مَرْصُوفَةٍ</span><span class="page-number">ص 123</span></li>
+                    <li><span class="lesson-title">أَدَوَاتُ الْكِتَابَةِ وَالرَّسْمِ</span><span class="page-number">ص 124</span></li>
+                    <li><span class="lesson-title">الأَعْدَادُ إِلَى 99 (1)</span><span class="page-number">ص 125</span></li>
+                    <li><span class="lesson-title">وَصْفُ شَكْلٍ بَسِيطٍ أَوْ مُرَكَّبٍ</span><span class="page-number">ص 126</span></li>
+                    <li><span class="lesson-title">أَدَوَاتِي تَتْرُكُ أَثَرًا</span><span class="page-number">ص 127</span></li>
+                    <li><span class="lesson-title">الأَعْدَادُ إِلَى 99 (2)</span><span class="page-number">ص 128</span></li>
+                    <li><span class="lesson-title">الْجَمْعُ (دُونَ احْتِفَاظٍ)</span><span class="page-number">ص 129</span></li>
+                    <li><span class="lesson-title">مَوَادُّ النَّظَافَةِ وَالتَّطْهِيرِ</span><span class="page-number">ص 130</span></li>
+                    <li><span class="lesson-title">حَصْرُ عَدَدٍ</span><span class="page-number">ص 131</span></li>
+                    <li><span class="lesson-title">الْحَاسِبَةُ (2)</span><span class="page-number">ص 132</span></li>
+                    <li><span class="lesson-title">مَوَادُّ التَّنْظِيفِ وَالتَّطْهِيرِ</span><span class="page-number">ص 133</span></li>
+                    <li><span class="lesson-title">أَيَّامُ الْأُسْبُوعِ</span><span class="page-number">ص 134</span></li>
+                    <li><span class="lesson-title">وَضْعِيَّاتُ جَمْعٍ أَوْ طَرْحٍ (3)</span><span class="page-number">ص 135</span></li>
+                    <li><span class="lesson-title">إِتْمَامُ شَكْلٍ مُسْتَوٍ (إفريز، فسيفساء).</span><span class="page-number">ص 136</span></li>
+                    <li><span class="lesson-title">فِي مَنْزِلِنَا مَوَادُّ لِلنَّظَافَةِ وَالتَّطْهِيرِ</span><span class="page-number">ص 137</span></li>
+                    <li><span class="lesson-title">مُتَتَالِيَةُ الْأَعْدَادِ الْأَصْغَرِ مِنْ 100</span><span class="page-number">ص 138</span></li>
+                    <li><span class="lesson-title">أُجَنِّدُ مَعَارِفي (ت ع 5)</span><span class="page-number">ص 139</span></li>
+                    <li><span class="lesson-title">أُجَنِّدُ مَعَارِفي (ر 5)</span><span class="page-number">ص 140</span></li>
+                    <li><span class="lesson-title">الْحَصِيلَةُ (ر 5)</span><span class="page-number">ص 141</span></li>
+                    <li><span class="lesson-title">الْحَصِيلَةُ (ت ع 5)</span><span class="page-number">ص 142</span></li>
+                    <li><span class="lesson-title">الرِّيَاضِيَّاتُ فِي حَيَاتِنَا الْيَوْمِيَّةِ</span><span class="page-number">ص 143</span></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const acc = document.getElementsByClassName("accordion-button");
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
