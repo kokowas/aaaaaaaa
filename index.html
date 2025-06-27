@@ -5,16 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>فهرس الكتاب</title>
     <style>
-        /* Define the custom font */
-        @font-face {
-            font-family: 'Questv1'; /* This is the name you'll use in your CSS */
-            src: url('Questv1-Regular.otf') format('opentype'); /* Path to your font file */
-            font-weight: normal;
-            font-style: normal;
-        }
-
         body {
-            font-family: 'Questv1', 'Tahoma', 'Arial', sans-serif; /* Use Questv1 first, then fallbacks */
+            font-family: 'Tahoma', 'Arial', sans-serif; /* Common Arabic-friendly fonts */
             margin: 0;
             padding: 20px;
             background-color: #f4f4f4;
@@ -25,7 +17,7 @@
             max-width: 100%;
             margin: 0 auto;
             background-color: #fff;
-            padding: 20px;
+            padding: 10px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
@@ -51,21 +43,23 @@
             font-weight: bold;
             border-bottom: 1px solid #ddd;
             position: relative; /* For the icon */
-            font-family: inherit; /* Ensures buttons also use the body font or Questv1 if set directly */
         }
 
-        .accordion-button:after {
-            content: '\2795'; /* Unicode character for "plus" sign (+) */
+        /* --- UPDATED ICON SECTION --- */
+        /* By using ::before, the icon appears before the text. */
+        /* With text-align: right, this places the icon on the right side. */
+        .accordion-button::before {
+            content: '\2795'; /* Unicode for "plus" sign (+) */
             font-size: 13px;
             color: #777;
-            float: left; /* This will place it on the left side */
-            margin-left: 5px; /* Adjust as needed for spacing */
+            margin-left: 10px; /* Space between icon and text (works for RTL) */
             transition: transform 0.3s ease;
         }
 
-        .accordion-button.active:after {
-            content: '\2796'; /* Unicode character for "minus" sign (-) */
+        .accordion-button.active::before {
+            content: '\2796'; /* Unicode for "minus" sign (-) */
         }
+        /* --- END OF UPDATED ICON SECTION --- */
 
 
         .accordion-button:hover {
@@ -101,36 +95,72 @@
 
         .lesson-title {
             flex-grow: 1;
-            margin-right: 10px;
+            margin-right: 10px; /* Add some space between title and icon if title is long */
         }
 
         .page-number {
             font-weight: bold;
             color: #555;
-            margin-left: 15px;
+            margin-left: 15px; /* Space between title and page number */
         }
 
         /* Unit-specific colors */
-        .unit1 { background-color: #e9c46a; color: #264653; }
+        .unit1 { background-color: #e9c46a; color: #264653; } /* Sandy yellow */
         .unit1:hover { background-color: #f4a261; }
-        .unit1.active:after { color: #264653; }
+        .unit1.active::before { color: #264653; } /* Changed :after to :before */
 
 
-        .unit2 { background-color: #2a9d8f; color: white; }
+        .unit2 { background-color: #2a9d8f; color: white; } /* Teal */
         .unit2:hover { background-color: #264653; }
-        .unit2.active:after { color: white; }
+        .unit2.active::before { color: white; } /* Changed :after to :before */
 
-        .unit3 { background-color: #f4a261; color: #264653; }
+        .unit3 { background-color: #f4a261; color: #264653; } /* Orange-yellow */
         .unit3:hover { background-color: #e76f51; }
-        .unit3.active:after { color: #264653; }
+        .unit3.active::before { color: #264653; } /* Changed :after to :before */
 
-        .unit4 { background-color: #e76f51; color: white; }
+        .unit4 { background-color: #e76f51; color: white; } /* Coral */
         .unit4:hover { background-color: #d9534f; }
-        .unit4.active:after { color: white; }
+        .unit4.active::before { color: white; } /* Changed :after to :before */
 
-        .unit5 { background-color: #8ecae6; color: #023047; }
+        .unit5 { background-color: #8ecae6; color: #023047; } /* Light Blue */
         .unit5:hover { background-color: #219ebc; }
-        .unit5.active:after { color: #023047; }
+        .unit5.active::before { color: #023047; } /* Changed :after to :before */
+        
+        /* --- RESPONSIVE STYLES for Small Screens --- */
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 5px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+
+            .accordion-button {
+                padding: 15px 10px; /* Adjust padding */
+                font-size: 1em;   /* Adjust font size */
+            }
+            
+            .accordion-content {
+                padding: 0 10px; /* Match button padding */
+            }
+
+            .accordion-content li {
+                font-size: 0.9em;
+                padding: 8px 0;
+                /* Allow content to wrap if needed on very small screens */
+                flex-wrap: wrap; 
+            }
+
+            .page-number {
+                margin-left: 10px;
+            }
+        }
 
     </style>
 </head>
